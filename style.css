@@ -79,7 +79,7 @@ img {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.4rem;
   text-transform: uppercase;
   color: white;
   letter-spacing: 2px;
@@ -103,6 +103,10 @@ img {
 
   .hero p {
     max-width: 42rem;
+  }
+
+  .hero h1{
+    font-size: 3rem;
   }
 }
 
