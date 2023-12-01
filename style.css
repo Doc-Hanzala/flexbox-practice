@@ -38,14 +38,18 @@ body {
   color: black;
 }
 
-.section-center {
+/* .section-center {
+  margin-top: 5rem;
+} */
+
+.section {
   margin-top: 5rem;
 }
 
 .section-title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: rgb(100, 100, 100);
   letter-spacing: 5px;
   margin-bottom: 2rem;
@@ -65,6 +69,12 @@ img {
   max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 990px) {
+  .section-center {
+    width: 95vw;
+  }
 }
 
 /* hero */
@@ -105,7 +115,7 @@ img {
     max-width: 42rem;
   }
 
-  .hero h1{
+  .hero h1 {
     font-size: 3rem;
   }
 }
@@ -136,12 +146,12 @@ img {
   .about {
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 
   .about-img,
   .about-info {
     flex: 0 0 calc(50% - 1rem);
+    align-self: center;
   }
 }
 
@@ -160,5 +170,247 @@ img {
     left: -25px;
     top: -25px;
     z-index: -1;
+  }
+}
+
+/* cities */
+
+.city {
+  background: lightgray;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.single-city {
+  margin: 3rem 0;
+}
+
+.icon {
+  background: orangered;
+  display: inline-block;
+  padding: 1rem 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.city-description h3 {
+  letter-spacing: 3px;
+  margin: 1rem 0rem;
+  color: var(--text-dark-clr);
+}
+
+.city-description p {
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 600px) {
+  .city-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .single-city {
+    flex: 0 0 calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .single-city {
+    flex: 0 0 calc(33% - 2rem);
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .single-city {
+    display: flex;
+    text-align: left;
+  }
+
+  .icon {
+    align-self: end;
+  }
+
+  .city-description {
+    padding-left: 0.5rem;
+  }
+}
+
+/* tours */
+
+.single-tour {
+  background: lightgray;
+  margin-bottom: 1.5rem;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.single-tour:hover {
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.6);
+  transform: scale(1.01);
+}
+
+.img-container {
+  position: relative;
+}
+
+.date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: orangered;
+  color: white;
+  padding: 0.3rem;
+}
+
+.tour-info {
+  padding: 1.25rem 0.75rem;
+}
+
+.tour-info h3 {
+  color: var(--text-dark-clr);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 1rem;
+}
+
+.tour-info p {
+  line-height: 2;
+}
+
+.booking {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-dark-clr);
+}
+
+@media screen and (min-width: 768px) {
+  .tours-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .single-tour {
+    flex: 0 0 calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 1068px) {
+  .single-tour {
+    flex: 0 0 calc(33.33% - 1rem);
+  }
+}
+/* contact */
+.contact {
+  background: orangered;
+  color: white;
+  padding: 3rem 0;
+}
+
+.contact h3 {
+  padding: 1rem 0rem;
+}
+
+.contact p {
+  padding-bottom: 1rem;
+}
+
+.input,
+.contact-btn {
+  font-size: 1rem;
+  padding: 0.6rem;
+  text-transform: uppercase;
+}
+
+.form {
+  display: flex;
+  max-width: 30rem;
+}
+
+.input {
+  flex: 1 1 auto;
+}
+
+.contact-btn {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 0.5rem;
+  background: black;
+  color: white;
+  border: 2px solid black;
+  transition: all 0.3s;
+}
+
+.contact-btn:hover {
+  background: white;
+  color: black;
+}
+
+@media screen and (min-width: 998px) {
+  .contact-center {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form {
+    align-self: flex-start;
+    flex: 1 1 auto;
+    max-width: 100%;
+    padding-left: 2rem;
+  }
+}
+
+/* images */
+
+.img-container {
+  position: relative;
+  cursor: pointer;
+  background: black;
+}
+
+.img-container img {
+  height: 17rem;
+  object-fit: cover;
+  transform: all 0.3s;
+}
+
+.img-container img:hover{
+  opacity: 0.6;
+}
+
+.img-container:hover .search {
+  opacity: 1;
+}
+
+.search {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+@media screen and (min-width: 786px) {
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .img-container {
+    flex: 0 0 calc(50%);
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .img-container {
+    flex: 0 0 calc(33%);
   }
 }
